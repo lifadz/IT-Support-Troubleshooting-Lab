@@ -22,6 +22,7 @@ A user submits a helpdesk ticket on a Monday morning saying they cannot access a
 
 Ask the user: "Is anyone else in your area having the same problem?" If the answer is no, this is likely a device-specific issue and not a network-wide outage.
 
+
 **Step 2 - Check the physical connection**
 
 - Is the Ethernet cable plugged in securely at both ends?
@@ -40,8 +41,6 @@ Look for:
 - A default gateway (e.g., 192.168.1.1)
 - DNS server entries
 
-> Screenshot suggestion: Capture the full ipconfig /all output here
-
 **Step 4 - Ping the default gateway**
 
 ```cmd
@@ -59,8 +58,6 @@ ping 8.8.8.8
 ```
 
 This test bypasses DNS completely. If 8.8.8.8 responds but websites still won't load, the issue is DNS-related. If 8.8.8.8 also fails, the problem is with internet routing or the ISP.
-
-> Screenshot suggestion: Show ping results to the gateway and to 8.8.8.8
 
 **Step 6 - Run tracert to see where packets stop**
 
