@@ -32,7 +32,7 @@ This should fail and confirms that DNS resolution is broken.
 
 This is the key test that separates a DNS issue from a full connectivity failure.
 
-> Screenshot suggestion: Show both ping results side by side
+---
 
 **Step 2 - Check DNS settings with ipconfig /all**
 
@@ -43,6 +43,8 @@ ipconfig /all
 Look at the DNS Servers field:
 - Blank means DNS was never configured or was wiped
 - Wrong IP means DNS is misconfigured and pointing to the wrong server
+
+---
 
 **Step 3 - Test DNS resolution with nslookup**
 
@@ -61,7 +63,7 @@ nslookup google.com 8.8.8.8
 
 If this works, the local or internal DNS server is the problem. If this also fails, check whether a firewall is blocking UDP port 53.
 
-> Screenshot suggestion: nslookup output showing failure with internal DNS and success with 8.8.8.8
+---
 
 **Step 4 - Flush the local DNS cache**
 
@@ -71,6 +73,8 @@ ipconfig /flushdns
 
 If this fixes the issue, the local cache had corrupted or stale entries.
 
+---
+
 **Step 5 - Check if the DNS server is reachable**
 
 ```cmd
@@ -79,6 +83,8 @@ ping <DNS_server_IP>
 
 If the DNS server does not respond to ping, it may be down or unreachable on the network.
 
+---
+
 **Step 6 - Temporarily switch to a public DNS server**
 
 To restore access for users while investigating the root cause:
@@ -86,6 +92,8 @@ To restore access for users while investigating the root cause:
 2. Set Primary DNS to 8.8.8.8 and Secondary DNS to 8.8.4.4
 
 If browsing restores immediately, the internal DNS server is confirmed as the problem.
+
+---
 
 **Step 7 - Check the internal DNS server**
 
