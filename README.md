@@ -70,10 +70,3 @@ It also serves as a portfolio to show that I can think through problems step by 
 
 ---
 
-## Screenshots
-
-The `/screenshots` folder contains command output captures from real troubleshooting sessions including `ipconfig`, `ping`, `tracert`, and `nslookup` results.
-
----
-
-*Always a work in progress.*
