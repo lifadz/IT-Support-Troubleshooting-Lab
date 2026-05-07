@@ -26,8 +26,6 @@ ipconfig /all
 
 A 169.254.x.x address means Windows could not reach a DHCP server and assigned itself a random IP. This is the first clue.
 
-> Screenshot suggestion: Show ipconfig output with the 169.254.x.x address
-
 **Step 2 - Check the physical layer first**
 
 - Is the Ethernet cable plugged in at both ends?
