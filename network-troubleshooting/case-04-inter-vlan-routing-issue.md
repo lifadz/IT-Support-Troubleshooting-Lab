@@ -26,8 +26,6 @@ ipconfig /all
 
 If the IP starts with 192.168.20.x, the machine is on VLAN 20. The file server is on 192.168.10.x which is a completely different subnet. Traffic between two different subnets requires routing and does not happen automatically.
 
-> Screenshot suggestion: ipconfig showing 192.168.20.x address confirming VLAN 20
-
 **Step 2 - Confirm internet access is working**
 
 ```cmd
@@ -53,8 +51,6 @@ tracert 192.168.10.50
 
 - One hop then timeouts means traffic is reaching the router or Layer 3 switch but being dropped there
 - No hops at all means traffic is not even leaving the local network segment
-
-> Screenshot suggestion: tracert output showing where the path breaks
 
 **Step 5 - Check the router or Layer 3 switch configuration**
 
