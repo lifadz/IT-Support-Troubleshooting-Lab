@@ -33,8 +33,6 @@ ping 192.168.1.1 -t
 
 The -t flag keeps it running until you stop it. When the drop happens, you will see a burst of "Request timed out" responses. This captures exactly when the drop occurs and how long it lasts.
 
-> Screenshot suggestion: Continuous ping output showing the timeout spikes during a drop
-
 **Step 3 - Inspect the physical cable and switch port**
 
 - Look at the Ethernet cable for any kinks, sharp bends, or visible damage
